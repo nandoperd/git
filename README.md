@@ -73,3 +73,10 @@ add semua file ke staging
 ```bash
   git add .
 ```
+
+## Hapus File
+
+Pada dasarnya menghapus file sama dengan menambah, alurnya :
+git add file yang dihapus --> file nya masuk ke staging --> git commit file yang dihapus --> file yang dihapus tidak lagi di repository
+
+## Membatalkan perubahan
