@@ -55,4 +55,21 @@ Cek status repository
 
 ## Alur
 
-Buat file --> git add --> masuk ke staging area
+Buat file --> git add --> masuk ke staging area --> git commit -m --> masuk ke repository
+
+## Ubah File
+
+Cek perubahan
+```bash
+  git diff
+```
+
+Contoh add satu persatu ke staging
+```bash
+  git add file1.txt file2.txt
+```
+
+add semua file ke staging
+```bash
+  git add .
+```
