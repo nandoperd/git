@@ -1,10 +1,5 @@
 
-# git dasar
-
-Catatan git dasar
-
-
-## Catatan
+# Catatan Git dasar
 
 install code di command : view -> command palette -> install 'code' command in PATH
 
@@ -80,3 +75,89 @@ Pada dasarnya menghapus file sama dengan menambah, alurnya :
 git add file yang dihapus --> file nya masuk ke staging --> git commit file yang dihapus --> file yang dihapus tidak lagi di repository
 
 ## Membatalkan perubahan
+#### -- Area Working directory --
+Membatalkan penambahan file
+```bash
+  git clean -f
+```
+
+Membatalkan perubahan file
+```bash
+  git restore namafile
+```
+
+Membatalkan penghapusan file
+```bash
+  git restore namafile
+```
+
+#### -- Area Staging Index --
+
+Jika ingin melakukan perubahan pada staging index, perlu untuk mengembalikannya ke working directory terlebih dahulu dengan cara :
+```bash
+  git restore --staged namafile
+```
+
+#### -- Area Repository --
+
+Jika file sudah dicommit, tidak ada cara yang bisa dilakukan.
+Ada 2 cara yang bisa dilakukan yaitu **Rollback Commit** atau **Revert Commit**
+
+## Commit Log
+
+commit log adalah riwayat (log) yang dilakukan pada file di dalam git
+
+Cek commit log
+```bash
+  git log
+```
+
+Cek commit log lebih ringkas
+```bash
+  git log --oneline
+```
+
+Cek commit log graph
+```bash
+  git log --oneline --graph
+```
+
+Cek detail commit
+```bash
+  git show hash
+```
+
+Cek detail commit terbaru
+```bash
+  git show HEAD
+```
+
+Compare commit
+```bash
+  git diff hash hash
+```
+
+Compare commit menggunakan difftool (difftool harus diset seperti di atas terlebih dahulu)
+```bash
+  git difftool hash hash
+```
+
+## Rename File
+
+ketika melakukan rename file, git membacanya file sebelumnya dihapus dan file dengan nama baru dianggap sebagai file baru. tapi jika file dengan nama lama dan baru diadd ke staging index, git akan membacanya sebagai rename.
+
+alur : rename file -> add nama baru & lama -> staging area terdeteksi rename -> commit
+
+## Reset Commit
+
+git reset pada dasarnya adalah menggeser HEAD (hash terakhir) ke hash yang kita inginkan, kemudian hash yang di atasnya (lebih baru) akan dihapus
+
+#### Mode git reset
+- --soft   : perubahan pada hash setelahnya tidak direset di staging index dan working directory
+- --mixed  : perubahan pada hash setelahnya tidak direset di working directory
+- --hard   : perubahan pada hash direset semua
+
+Comntoh
+```bash
+  git reset --soft e3ac3c5
+```
