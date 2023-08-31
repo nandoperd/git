@@ -185,3 +185,32 @@ Contoh
 ini adalah cara untuk melihat snapshot yaitu file secara keseluruhan
 
 alur : cek branch -> checkout branch --> checkout head yang dituju -> checkout branch (kembali)
+
+cek branch (bisa master/main)
+```bash
+  git branch --show-current
+```
+
+contoh checkout
+```bash
+  git checkout 3183fea
+```
+
+contoh checkout kembali
+```bash
+  git checkout master
+```
+
+## Revert Commit
+fungsinya adalah untuk membalik commit sebelumnya, jika reset adalah mengganti semua file commit, revert digunakan untuk mengembalikan hanya commit yang dituju
+
+contoh : pada commit dengan hashe3ac3c5 saya melakukan rename file2.txt ke file_2.txt, dengan revert, maka file nya akan kembali jadi file2.txt
+
+```bash
+  git revert e3ac3c5
+```
+
+## Ignore
+fungsinya untuk mengecualikan file yang tidak ingin disimpan di dalam git
+
+alur : buat file .gitignore -> tulis di dalam .gitignore file yang dikecualikan -> commit .gitignore
