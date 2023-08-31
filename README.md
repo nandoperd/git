@@ -157,7 +157,26 @@ git reset pada dasarnya adalah menggeser HEAD (hash terakhir) ke hash yang kita 
 - --mixed  : perubahan pada hash setelahnya tidak direset di working directory
 - --hard   : perubahan pada hash direset semua
 
-Comntoh
+Contoh
 ```bash
   git reset --soft e3ac3c5
+```
+
+## Amend Commit
+commit amend digunakan untuk melakukan commit sekaligus bersamaan dengan file yang belum dicommit. cara ini adalah yang lebih praktis dari commit reset. cara ini biasanya digunakan jika ada revisi pada isi file yang telah dicommit
+note : commit ini akan mengganti nilai hash
+
+Contoh
+```bash
+  git commit --amend -m "add file3.txt"
+```
+
+alur : commit file -> edit isi file -> add file -> commit ammend -> file berhasil dicommit bersama file lainnya
+
+## Cek Versi File Sebelumnya
+kita bisa melihat file pada versi sebelumnya dengan melakukan perintah checkout pada hash yang dituju. nantinya file tsb akan berpindah ke staging index
+
+Contoh
+```bash
+  git checkout 5082d50 -- file1.txt
 ```
