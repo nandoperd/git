@@ -214,3 +214,26 @@ contoh : pada commit dengan hashe3ac3c5 saya melakukan rename file2.txt ke file_
 fungsinya untuk mengecualikan file yang tidak ingin disimpan di dalam git
 
 alur : buat file .gitignore -> tulis di dalam .gitignore file yang dikecualikan -> commit .gitignore
+
+## Blame
+fungsinya untuk mencari tahu siapa yang melakukan perubahan dan juga commitnya
+
+Contoh
+```bash
+  git blame file2.txt
+```
+
+Untuk melihat detailnya, gunakan hash nya contoh :
+```bash
+  git show 516384fe
+```
+
+## Alias
+fungsinya seperti membuat shortcut pada perintah git
+
+Contoh
+```bash
+  git config --global alias.logone "log --oneline"
+```
+
+maka hasilnya jika kita tuliskan perintah "git logone" hasilnya akan sama seperti perintah "git log --oneline"
