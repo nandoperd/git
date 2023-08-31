@@ -1,0 +1,8 @@
+# Ignore folder n
+n/
+
+# Ignore file extension .backup
+*.backup
+
+# Ignore jangan.txt
+jangan.txt
