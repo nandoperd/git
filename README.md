@@ -180,3 +180,8 @@ Contoh
 ```bash
   git checkout 5082d50 -- file1.txt
 ```
+
+## Lihat Snapshot Sebelumnya
+ini adalah cara untuk melihat snapshot yaitu file secara keseluruhan
+
+alur : cek branch -> checkout branch --> checkout head yang dituju -> checkout branch (kembali)
