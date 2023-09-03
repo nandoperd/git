@@ -1,5 +1,5 @@
 
-# Catatan Git dasar
+# BAB : Git Dasar
 
 install code di command : view -> command palette -> install 'code' command in PATH
 
@@ -237,3 +237,75 @@ Contoh
 ```
 
 maka hasilnya jika kita tuliskan perintah "git logone" hasilnya akan sama seperti perintah "git log --oneline"
+
+# BAB : BRANCH
+
+cek branch saat ini
+```bash
+  git branch --show-current
+```
+
+buat branch
+```bash
+  git branch namabranch
+```
+
+cek branch 
+```bash
+  git branch 
+```
+
+pindah ke branch yang dituju
+```bash
+  git switch namabranch
+```
+atau
+```bash
+  git checkout namabranch
+```
+
+ubah nama branch
+```bash
+  git branch -m namabranch
+```
+
+hapus branch
+```bash
+  git branch -d namabranch
+```
+
+## Multiple Branch
+Membuat percabangan pada commit
+
+alur : buat branch -> pindah ke branch yang dituju -> add & commit file pada branch
+
+
+
+## Merge
+Menggabungkan (melakukan penarikan) percabangan pada commit
+
+alur : pindah ke lokasi branch yang akan dimerge
+
+Contoh
+```bash
+  git merge fitur/1
+```
+
+## Merge Conflict
+adalah situasi ketika melakukan merge file pada branch yang berbeda
+
+Membatalkan conflict
+```bash
+  git merge --abort
+```
+Memperbaiki conflict
+untuk memperbaiki conflict harus dilakukan secara manual pada file yang error
+
+alur : merge conflict -> perbaiki manual file yang conflict -> add & commit file
+
+## Cherry Pick
+digunakan untuk mengambil commit pada branch lain yang ingin ditambahkan pada branch utama
+
+```bash
+  git cherry-pick commitid
+```
