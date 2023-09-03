@@ -347,3 +347,22 @@ hapus remote
 ## Push
 melakukan upload ke github
 
+push dengan nama yang sama (origin : branch, master : commit di local)
+```bash
+  git push origin master
+```
+
+push dengan nama yang beda
+```bash
+  git push origin master:development
+```
+
+push semua branch local ke github
+```bash
+  git push origin --all
+```
+
+menghapus branch (di remote)
+```bash
+  git push --delete origin fitur/d
+```
