@@ -324,3 +324,26 @@ Tes SSH
 ```bash
   ssh -T git@github.com
 ```
+
+## Remote Repository
+untuk melakukan remote repository dapat menggunakan git remote add nama ssh-url
+
+contoh
+```bash
+  git remote add origin git@github.com:nandoperd/git.git
+```
+
+melihat remote
+```bash
+  git remote
+  git remote get-url origin
+```
+
+hapus remote
+```bash
+  git remote rm origin
+```
+
+## Push
+melakukan upload ke github
+
