@@ -366,3 +366,19 @@ menghapus branch (di remote)
 ```bash
   git push --delete origin fitur/d
 ```
+
+melakukan perubahan/penambahan file di local ke github
+
+alur : add & commit file local -> push origin namaremote 
+
+## Clone
+
+Clone dengan nama default (sama seperti di github)
+```bash
+  git clone urlremoterepository
+```
+
+Clone dengan nama beda
+```bash
+  git clone urlremoterepository namayangdiinginkan
+```
