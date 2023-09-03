@@ -309,3 +309,18 @@ digunakan untuk mengambil commit pada branch lain yang ingin ditambahkan pada br
 ```bash
   git cherry-pick commitid
 ```
+
+# Git Remote
+ketika git sudah siap untuk diupload, saatnya untuk menyimpannya di server git
+
+alur : buat ssh di desktop -> menambahkan SSH public key ke github (github.com/settings/keys) -> buka id_rsa.pub copy dan add di SSH keys github -> tes SSH ke github 
+
+Membuat SSH (Secure Shell)
+```bash
+  ssh-keygen
+```
+
+Tes SSH
+```bash
+  ssh -T git@github.com
+```
